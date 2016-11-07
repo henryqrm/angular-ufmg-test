@@ -1,8 +1,19 @@
-<div class="tech">
-  <img class="tech-logo" ng-src="{{ $ctrl.tech.logo }}"/>
-  <h3 class="tech-h3">
-    {{ $ctrl.tech.title }}
-  </h3>
-  <p>{{ $ctrl.tech.text1 }}</p>
-  <p>{{ $ctrl.tech.text2 }}</p>
+<div class="news">
+  <a class="title" ui-sref>
+    {{ $ctrl.news.title }}
+    <span class="date">08 de Janeiro</span>
+  </a>
+  <h4 class="subtitle">{{ $ctrl.news.subtitle }}</h4>
+  <hr class="divider">
+  <div class="ellipsis">
+    <div class="box">
+      <p class="text">{{ $ctrl.news.text}}</p>
+    </div>
+    <div class="more">
+      <a href="#">Ler mais</a>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag" ng-repeat="tag in $ctrl.news.tags.split(';') track by $index">{{tag}}</span>
+  </div>
 </div>

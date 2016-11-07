@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header-title">
+    <button class="action" ng-click="$ctrl.showMain()">
+      <img ng-srcset="assets/svg/menu.svg" type="image/svg+xml">
+      <span class="label">Menu</span>
+    </button>
+  </div>
+  <div class="header-date user-area">
+    <img class="avatar" ng-src="assets/svg/user.svg" alt="user">
+    <div class="text">
+      <div class="name">{{$ctrl.name}}</div>
+      <div class="email">{{$ctrl.email}}</div>
+    </div>
+    <div class="action">
+      <a href="#">Logoff</a>
+    </div>
+  </div>
+</header>

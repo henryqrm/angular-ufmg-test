@@ -1,3 +1,5 @@
+@import "common/index";
+@import "common/variables";
 // Reset
 *,
 *:after,
@@ -10,7 +12,7 @@
 html {
   box-sizing: border-box;
   font-family: 'Open Sans', Arial, sans-serif;
-  color: #444;
+  color: $text-color-light;
 }
 
 input,
@@ -30,7 +32,7 @@ a {
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: $backgroud-color;
   margin: 0 auto;
   min-width: 490px;
   overflow-x: hidden;
@@ -55,8 +57,8 @@ body {
   padding-left: 16px;
 }
 
-@media (max-width:901px){
-  .nav{
+@media (max-width:901px) {
+  .nav {
     display: none !important;
   }
 }
@@ -329,69 +331,57 @@ news {
 
 // Login component
 .content-login {
+  background-color: $backgroud-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
   >.login {
     width: 460px;
     min-width: 460px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 3rem;
+    margin-top: 2rem;
     min-width: 340;
-    border: 1px solid lightgray;
-    border-bottom: 3px solid #d9d9d9;
     border-radius: .5rem;
     margin: 1rem 0;
     padding: 2rem 4rem;
     >.title {}
     >.form-group {
       width: 100%;
-      margin-top: 2rem;
+      margin-top: 2.4rem;
       display: flex;
       justify-content: space-between;
-      align-content: space-around;
       >.label {
         flex: 1;
         align-self: flex-start;
       }
-      >.input {
+      >.fild {
         flex: 1 50%;
-        align-self: flex-end;
-        font-size: .9rem;
-        font-weight: 300;
-        height: 2rem;
-        border-radius: 5px;
-        border: 1px solid #212121;
-        padding: .1rem .3rem;
-      }
-      >.input:focus {
-        border-bottom: .2rem solid #212121;
-        outline: none;
+        position: relative;
+        >.has-error {
+          position: absolute;
+          font-size: .9rem;
+          font-weight: 300;
+          color: $danger-color;
+        }
       }
     }
     >.action {
+      position: relative;
+      margin-top: 1rem;
       width: 100%;
       display: flex;
       flex-direction: column;
-      >.button {
-        position: relative;
-        cursor: pointer;
-        margin: 1rem 0;
-        border: .1rem solid #444;
-        border-bottom: .2rem solid #444;
-        border-radius: 5px;
-        font-size: 1rem;
-        text-transform: uppercase;
-        padding: .4rem;
-        &:hover {
-          top: 1px;
-        }
-        &:active {
-          border-bottom: .1rem solid #444;
-        }
+      >.has-error {
+        position: absolute;
+        font-size: .9rem;
+        font-weight: 300;
+        color: $danger-color;
+        align-self: center;
+        bottom: 30px;
       }
     }
   }

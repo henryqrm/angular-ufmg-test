@@ -6,6 +6,8 @@ import {
     loginComponent
 } from './login.component';
 
+// import {AuthModule} from './../../components/auth/auth.module';
+
 export const LoginModule = 'login';
 
 angular

@@ -1,12 +1,17 @@
 class HeaderController {
-  constructor() {
-    this.name = 'Henrique';
-    this.email = 'email.henrique.rm@gmail.com';
+  constructor(Auth) {
+    this.Auth = Auth;
   }
-  showMain() {
-    console.log('oculta menu');
+  $onInit() {
+    this.Auth.getUser().then(user => {
+      this.user = user.data;
+    })
+  }
+  logout() {
+    this.Auth.logout();
   }
 }
+
 export const header = {
   templateUrl: 'app/template/header.html',
   controller: HeaderController

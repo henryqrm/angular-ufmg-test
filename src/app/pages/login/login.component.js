@@ -1,28 +1,27 @@
 class LoginController {
-    constructor() {
-        // this.Auth = Auth;
+    constructor(Auth, $state) {
+        this.Auth = Auth;
+        this.$state = $state;
+        this.err = false;
     }
 
-    show(form) {
-        console.log(form);
+    login(isValid) {
+        if (isValid) {
+            this.Auth.login(this.user.email, this.user.password)
+                .then(data => {
+                    this.$state.go('app');
+                })
+                .catch(err => {
+                    if (err.status === 401) {
+                        this.err = true;
+                    }
+                    console.log('err', err);
+                });
+        }
     }
-
-    // login(isValid) {
-    //     if (isValid) {
-    //         this.Auth.login({
-    //                 email: this.email,
-    //                 password: this.password
-    //             })
-    //             .then(data => {
-    //                 console.log('logado com sucesso');
-    //             })
-    //             .catch(err => {
-    //                 console.log('Erro qualquer do servidor');
-    //             });
-    //     }
-    // }
 
 }
+// LoginController.$inject = ['auth'];
 export const loginComponent = {
     templateUrl: 'app/pages/login/login.html',
     controller: LoginController,

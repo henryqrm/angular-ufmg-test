@@ -8,11 +8,11 @@
   <div class="header-date user-area">
     <img class="avatar" ng-src="assets/svg/user.svg" alt="user">
     <div class="text">
-      <div class="name">{{$ctrl.name}}</div>
-      <div class="email">{{$ctrl.email}}</div>
+      <div class="name">{{$ctrl.user.name}}</div>
+      <div class="email">{{$ctrl.user.email}}</div>
     </div>
     <div class="action">
-      <a href="#">Logoff</a>
+      <a href="#" ng-click="$ctrl.logout()">Logoff</a>
     </div>
   </div>
 </header>

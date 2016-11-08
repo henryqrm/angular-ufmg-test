@@ -1,0 +1,23 @@
+@import "/variables";
+.-input {
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 300;
+    background: none;
+    height: 2rem;
+    border-width: 0;
+    border-bottom: 0.1rem solid $text-color-light;
+    padding: .1rem .3rem;
+    &:focus {
+        box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.14);
+        outline: none;
+        color: $text-color-light;
+    }
+    &:valid,
+    &:invalid {
+        color: $text-color-light;
+    }
+    &.-error {
+        border-color: $danger-color;
+    }
+}

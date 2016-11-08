@@ -1,6 +1,9 @@
 <div class="news">
-  <a href="{{$ctrl.news.news_url}}" target="_blank" class="title">
-    {{$ctrl.news.post_date.substring(0,7).replace('-','/')}} - {{ $ctrl.news.title }}
+  <a class="title" href="{{$ctrl.news.news_url}}" target="_blank">
+    {{$ctrl.news.post_date.substring(0,7).replace('-','/')}} - {{ $ctrl.news.title }} 
+  </a>
+  <a ui-sref='app.newsEdit({id:$ctrl.news.id})' class="edit">
+    (<img class="icon" src="./../../../assets/svg/edit.svg" alt=""> editar)
   </a>
   <h4 class="subtitle">{{ $ctrl.news.subtitle }}</h4>
 </div>

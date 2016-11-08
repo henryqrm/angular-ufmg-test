@@ -1,19 +1,36 @@
 <div class="newness">
   <h2 class="title">
     Notícias da UFMG
+    <a ui-sref="app.newsCreate"><small>Add notícia</small></a>
   </h2>
   <div class="box">
+    <select ng-model="$ctrl.size" ng-change="$ctrl.openPage(1)">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="25">25</option>
+    </select>
     <news ng-repeat="news in $ctrl.newness" news="news"></news>
   </div>
   <div class="pagination">
     <div class="back">
-      <
+      <button ng-disabled="!($ctrl.sectionCurrent > 2)" ng-click="$ctrl.back()">
+        <
+      </button>
     </div>
     <div class="pages">
-      1
+      <span ng-if="$ctrl.sectionCurrent > 2">...</span>
+      <span ng-repeat="page in $ctrl.pages track by $index">
+            <span ng-if="$ctrl.sectionCurrent-1 === page" ng-click="$ctrl.openPage(page)">{{page}}</span>
+      <span ng-if="$ctrl.sectionCurrent === page" ng-click="$ctrl.openPage(page)">{{page}}</span>
+      <span ng-if="$ctrl.sectionCurrent+1 === page" ng-click="$ctrl.openPage(page)">{{page}}</span>
+      </span>
+      <span ng-if="($ctrl.sectionCurrent+2) <= $ctrl.numberPages">...</span>
     </div>
     <div class="next">
-      >
+      <button ng-disabled="!(($ctrl.sectionCurrent+2) <= $ctrl.numberPages)" ng-click="$ctrl.next()">
+        >
+      </button>
     </div>
   </div>
 </div>

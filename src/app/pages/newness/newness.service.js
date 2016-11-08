@@ -6,13 +6,29 @@ export class NewsService {
         this.apiNews = (page, size) => {
             return `${API}/news?page=${page}&page_size=${size}`;
         };
+        this.apiNewsCreate = `${API}/news`;
+        this.apiNewsEdit = id => `${API}/news/${id}`;
+        this.apiNewsGet = id => `${API}/news/${id}`;
     }
 
-    get(page, size) {
-        if (!page || !size) {
+    list(page, size) {
+        if (page === undefined) {
             page = 1;
-            size = 15;
         }
+        if (size === undefined) {
+            size = 10;
+        }
+
         return this.$http.get(this.apiNews(page, size));
     }
+    create(news) {
+        return this.$http.post(news, this.apiNewsCreate);
+    }
+    edit(id, news) {
+        return this.$http.put(news, this.apiNewsEdit(id));
+    }
+    get(id) {
+        return this.$http.get(this.apiNewsGet(id));
+    }
+
 }

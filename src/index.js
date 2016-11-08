@@ -5,16 +5,12 @@ import {LoginModule} from './app/pages/login/login.module';
 import {homeModule} from './app/pages/home/home.module';
 
 
-//Authentication
-
 import {Auth} from './app/common/auth';
 import {AuthInterception} from './app/common/interception';
 import routesAuth from './app/common/router.decorator';
 
 
 import 'angular-ui-router';
-import 'angular-loading-bar';
-import 'angular-animate';
 import routesConfig from './routes';
 
 import {main} from './app/template/main';
@@ -29,9 +25,7 @@ angular
     newnessModule,
     LoginModule,
     homeModule,
-    'ui.router',
-    'angular-loading-bar',
-    'ngAnimate'
+    'ui.router'
     ])
   .config(routesConfig)
   .run(routesAuth)

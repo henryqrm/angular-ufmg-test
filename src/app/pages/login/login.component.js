@@ -9,7 +9,7 @@ class LoginController {
         if (isValid) {
             this.Auth.login(this.user.email, this.user.password)
                 .then(data => {
-                    this.$state.go('app');
+                    this.$state.go('app.home');
                 })
                 .catch(err => {
                     if (err.status === 401) {

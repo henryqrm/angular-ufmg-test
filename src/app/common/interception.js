@@ -1,4 +1,3 @@
-
 export class AuthInterception {
     constructor($rootScope, $q, $injector, $window) {
         var state;

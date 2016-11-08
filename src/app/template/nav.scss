@@ -1,0 +1,37 @@
+@media (max-width:901px) {
+  .nav {
+    display: none !important;
+  }
+}
+
+.nav {
+  width: 13rem;
+  padding: .5em;
+  display: inline-block;
+  padding-left: 16px;
+  >.list {
+    >.item {
+      margin-top: .2rem;
+      padding: .5em 1em;
+      cursor: pointer;
+      display: flex;
+      >.box {
+        flex: 1;
+        display: flex;
+        width: 100%;
+        >.icon {
+          height: 24px;
+          width: 24px;
+        }
+        >.text {
+          padding-left: 1em;
+        }
+      }
+    }
+    >.active {
+      background-color: rgba(0, 0, 0, .05);
+      border-radius: 2px;
+      font-weight: bold;
+    }
+  }
+}

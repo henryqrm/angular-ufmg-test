@@ -25,12 +25,10 @@ export class Auth {
                 this.$window.localStorage.setItem('token', res.data.access_token);
                 this.getUser()
                     .catch(err => {
-                        console.log(err);
                         this.logout();
-                    })
+                    });
             })
             .catch(err => {
-                console.log(err);
                 return this.$q.reject(err.data);
             });
     }

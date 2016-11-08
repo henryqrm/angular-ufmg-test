@@ -1,0 +1,23 @@
+.wellcome {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  position: relative;
+  color: white;
+  >.title {
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  >.description {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 20%;
+  }
+  cite{
+    float: right;
+  }
+}

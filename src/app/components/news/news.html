@@ -1,5 +1,6 @@
-<article>
-    <section>
-        
-    </section>
-</article>
+<div class="news">
+  <a href="{{$ctrl.news.news_url}}" target="_blank" class="title">
+    {{$ctrl.news.post_date.substring(0,7).replace('-','/')}} - {{ $ctrl.news.title }}
+  </a>
+  <h4 class="subtitle">{{ $ctrl.news.subtitle }}</h4>
+</div>

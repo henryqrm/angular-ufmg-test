@@ -1,0 +1,24 @@
+.newness {
+    margin: 1rem;
+    >.title {
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    >.box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    >.pagination {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        >.next {
+        }
+        >.pages {
+        }
+        >.back {
+        }
+    }
+}

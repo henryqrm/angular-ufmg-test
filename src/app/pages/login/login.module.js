@@ -1,7 +1,5 @@
 import angular from 'angular';
 
-import routesLogin from './login.router';
-
 import {
     loginComponent
 } from './login.component';
@@ -15,4 +13,10 @@ angular
         'ui.router'
     ])
     .component('login', loginComponent)
-    .config(routesLogin);
+    .config($stateProvider => {
+        $stateProvider
+            .state('login', {
+                url: '/acesso',
+                template: '<login></login>'
+            });
+    });

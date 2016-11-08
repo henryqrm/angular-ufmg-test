@@ -1,16 +1,20 @@
 <nav class="nav">
     <ul class="list">
-        <li class="item active">
-            <img class="icon" ng-src="./../../assets/svg/home.svg"></>
-            <div class="text">
-                Home
-            </div>
+        <li class="item" ui-sref-active="active">
+            <a ui-sref="app.home" class="box">
+                <img class="icon" ng-src="./../../assets/svg/home.svg">
+                <div class="text">
+                    Home
+                </div>
+            </a>
         </li>
-        <li class="item active">
-            <img class="icon" ng-src="./../../assets/svg/news.svg"></>
-            <div class="text">
-                Notícias
-            </div>
+        <li class="item" ui-sref-active="active">
+            <a ui-sref="app.news" class="box">
+                <img class="icon" ng-src="./../../assets/svg/news.svg">
+                <div class="text">
+                    Notícias
+                </div>
+            </a>
         </li>
     </ul>
 </nav>

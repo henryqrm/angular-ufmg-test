@@ -11,16 +11,31 @@ export class Auth {
     }
 
     login(username, password) {
-        return this.$http.post(this.apiAuth, {
-                username: username,
-                password: password,
-                grant_type: 'password',
-                client_id: 'cms'
-            }, {
-                // headers: {
-                //     'Content-Type': 'application/x-www-form-urlencoded'
-                // }
+        return this.$http({
+                method: 'POST',
+                url: this.apiAuth,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {
+                    username: username,
+                    password: password,
+                    grant_type: 'password',
+                    client_id: 'cms'
+                }
             })
+            // return this.$http.post(this.apiAuth, {
+            //         username: username,
+            //         password: password,
+            //         grant_type: 'password',
+            //         client_id: 'cms'
+            //     })
             .then(res => {
                 this.$window.localStorage.setItem('token', res.data.access_token);
                 this.getUser()

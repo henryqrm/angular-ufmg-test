@@ -1,8 +1,17 @@
+@import "./pages/newness.tpl";
+ 
 .newness {
     margin: 1rem;
+    width: 80%;
     >.title {
         font-weight: 300;
         font-size: 1.5rem;
+        position: relative;
+        >.add {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     }
     >.box {
         display: flex;
@@ -14,11 +23,52 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        >.next {
+        margin-top: 1rem;
+        >.next,
+        >.back {
+            position: relative;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            border-radius: 100%;
+            // box-shadow: 1.5px 2.5px 0 0 rgba(0, 0, 0, 0.26);
+            width: 48px;
+            height: 48px;
+            >.icon {
+                padding: .6rem;
+                width: 48px;
+                height: 48px;
+            }
+            &.-disabled {
+                cursor: default;
+            }
+            &.-disabled:hover,
+            &.-disabled:active {
+                top: 0 !important;
+                box-shadow: none !important;
+            }
+            &:hover {
+                box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+            }
+            &:active {
+                top: 1px;
+            }
+            &:focus {
+                outline: none;
+            }
         }
         >.pages {
-        }
-        >.back {
+            >.box {
+                display: inline-block;
+                >.page {
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    margin: 0 .5rem;
+                    &.-active {
+                        color: #fff;
+                    }
+                }
+            }
         }
     }
 }

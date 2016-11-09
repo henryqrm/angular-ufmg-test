@@ -10,10 +10,10 @@ import {
 
 import {
     newsCreate
-} from './crud/create/create.component';
+} from './pages/create/create.component';
 import {
     newsEdit
-} from './crud/edit/edit.component';
+} from './pages/edit/edit.component';
 
 import {
     newsModule

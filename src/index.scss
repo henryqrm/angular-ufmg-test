@@ -31,24 +31,11 @@ img {
   max-width: 100%
 }
 
-a {
-  color: #009AE0;
-  display: inline-block;
-}
-
 body {
   background-color: $backgroud-color;
   margin: 0 auto;
   min-width: 490px;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased
-}
-
-@media (min-width:1px) {
-  body {
-    max-width: none;
-  }
 }
 
 @media (max-width: 490px) {
@@ -95,20 +82,10 @@ body {
   }
 }
 
-main {
-  min-height: 60vh
-}
-
-body,
-h1,
-h2,
-h3 {
-  font-weight: 300
-}
-
 a {
   color: #5aadbb;
   text-decoration: none;
+  display: inline-block;
   &:hover {
     color: #5acddb;
   }
@@ -130,6 +107,3 @@ a {
   display: flex;
   flex-direction: column;
 }
-
-
-

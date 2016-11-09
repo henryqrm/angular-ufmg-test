@@ -1,13 +1,13 @@
 import angular from 'angular';
 
 import {newnessModule} from './app/pages/newness/newness.module';
-import {LoginModule} from './app/pages/login/login.module';
+import {loginModule} from './app/pages/login/login.module';
 import {homeModule} from './app/pages/home/home.module';
 
 
-import {Auth} from './app/common/auth';
-import {AuthInterception} from './app/common/interception';
-import routesAuth from './app/common/router.decorator';
+import {Auth} from './app/auth/auth';
+import {AuthInterception} from './app/auth/interception';
+import routesAuth from './app/auth/router.decorator';
 
 
 import 'angular-ui-router';
@@ -23,16 +23,16 @@ import './index.scss';
 angular
   .module('app', [
     newnessModule,
-    LoginModule,
+    loginModule,
     homeModule,
     'ui.router'
     ])
   .config(routesConfig)
   .run(routesAuth)
   .component('app', main)
-  .component('fountainHeader', header)
-  .component('fountainNav', nav)
-  .component('fountainFooter', footer)
+  .component('hHeader', header)
+  .component('hNav', nav)
+  .component('hFooter', footer)
   .service('Auth', Auth)
   .service('AuthInterception', AuthInterception)
   .constant('API', 'http://150.164.80.212:9999');

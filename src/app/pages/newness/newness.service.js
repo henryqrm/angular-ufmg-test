@@ -22,10 +22,24 @@ export class NewsService {
         return this.$http.get(this.apiNews(page, size));
     }
     create(news) {
-        return this.$http.post(news, this.apiNewsCreate);
+        return this.$http({
+            method: 'POST',
+            url: this.apiNewsCreate,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj)
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                return str.join("&");
+            },
+            data: news
+        });
+        // return this.$http.post(this.apiNewsCreate, news);
     }
-    edit(id, news) {
-        return this.$http.put(news, this.apiNewsEdit(id));
+    update(id, news) {
+        return this.$http.put(this.apiNewsEdit(id), news);
     }
     get(id) {
         return this.$http.get(this.apiNewsGet(id));

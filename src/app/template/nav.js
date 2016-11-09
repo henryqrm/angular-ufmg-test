@@ -1,8 +1,11 @@
 class NavController {
-  constructor() {
+  constructor($rootScope) {
+    this.hidden = false;
+    $rootScope.$on('main', () => {
+      this.hidden = !this.hidden;
+    });
   }
-  showMain() {
-  }
+
 }
 export const nav = {
   templateUrl: 'app/template/nav.html',

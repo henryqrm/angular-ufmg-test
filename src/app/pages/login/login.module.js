@@ -4,14 +4,10 @@ import {
     loginComponent
 } from './login.component';
 
-// import {AuthModule} from './../../components/auth/auth.module';
-
-export const LoginModule = 'login';
+export const loginModule = 'login';
 
 angular
-    .module(LoginModule, [
-        'ui.router'
-    ])
+    .module(loginModule, [])
     .component('login', loginComponent)
     .config($stateProvider => {
         $stateProvider

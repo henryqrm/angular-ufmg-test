@@ -1,0 +1,49 @@
+<form name="form" ng-submit="$ctrl.save(form.$valid)" novalidate>
+    <div class="newness-tpl">
+        <div class="content">
+            <h1 class="title">{{$ctrl.title}}</h1>
+            <div class="form-group">
+                <label class="label" for="">Título:</label>
+                <div class="fild">
+                    <input class="-input" ng-class="{'-error':(form.$submitted || form.title.$touched) && (form.title.$error.required)}" type="text" name="title" ng-model="$ctrl.news.title" placeholder="Insira um título." required>
+                    <div class="has-error" ng-show="form.$submitted || form.title.$touched">
+                        <span ng-show="form.title.$error.required">Insira o título.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label" for="">Subtítulo:</label>
+                <div class="fild">
+                    <input class="-input" ng-class="{'-error':(form.$submitted || form.subtitle.$touched) && (form.subtitle.$error.required)}" type="text" name="subtitle" ng-model="$ctrl.news.subtitle" placeholder="Insira um subtítulo." required>
+                    <div class="has-error" ng-show="form.$submitted || form.subtitle.$touched">
+                        <span ng-show="form.subtitle.$error.required">Insira o subtítulo.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label" for="">Texto:</label>
+                <div class="fild">
+                    <textarea class="-input" rows="5" ng-class="{'-error':(form.$submitted || form.text.$touched) && (form.text.$error.required)}" type="text" name="text" ng-model="$ctrl.news.text" placeholder="Escreva o texto." required></textarea>
+                    <div class="has-error" ng-show="form.$submitted || form.text.$touched">
+                        <span ng-show="form.text.$error.required">Escreva o texto.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="">Palavras-chave:</label>
+                <div class="fild">
+                    <input class="-input" rows="5" ng-class="{'-error':(form.$submitted || form.text.$touched) && (form.text.$error.required)}" type="text" name="text" ng-model="$ctrl.news.tags" placeholder="Ex: feriado, ufmg, jogo">
+                </div>
+            </div>
+
+            <div class="action">
+                <button class="-button" type="submit">Salvar</button>
+                <div class="has-error" ng-show="form.$submitted && $ctrl.err">
+                    <span ng-show="$ctrl.err">Erro inesperado, tente novamente.</span>
+                </div>
+                <a href="#" ui-sref="app.news">Cancelar</a>
+            </div>
+        </div>
+    </div>
+</form>

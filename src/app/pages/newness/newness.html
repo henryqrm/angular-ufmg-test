@@ -1,36 +1,45 @@
-<div class="newness">
+<div ng-if="!$ctrl.loading">
+  Carregando...
+</div>
+<div class="newness" ng-if="$ctrl.loading">
   <h2 class="title">
     Notícias da UFMG
-    <a ui-sref="app.newsCreate"><small>Add notícia</small></a>
+    <a class="add" ui-sref="app.newsCreate"><small>Add notícia</small></a>
   </h2>
   <div class="box">
-    <select ng-model="$ctrl.size" ng-change="$ctrl.openPage(1)">
+    <!--<select ng-model="$ctrl.size" ng-change="$ctrl.openPage(1)">
       <option value="5">5</option>
       <option value="10">10</option>
       <option value="15">15</option>
       <option value="25">25</option>
-    </select>
+    </select>-->
     <news ng-repeat="news in $ctrl.newness" news="news"></news>
   </div>
   <div class="pagination">
-    <div class="back">
-      <button ng-disabled="!($ctrl.sectionCurrent > 2)" ng-click="$ctrl.back()">
-        <
+    <button class="back" ng-class="{'-disabled':!($ctrl.page > 1)}" ng-disabled="!($ctrl.page > 1)" ng-click="$ctrl.back()">
+        <img class="icon" src="assets/svg/back.svg" alt="">
       </button>
-    </div>
     <div class="pages">
-      <span ng-if="$ctrl.sectionCurrent > 2">...</span>
-      <span ng-repeat="page in $ctrl.pages track by $index">
-            <span ng-if="$ctrl.sectionCurrent-1 === page" ng-click="$ctrl.openPage(page)">{{page}}</span>
-      <span ng-if="$ctrl.sectionCurrent === page" ng-click="$ctrl.openPage(page)">{{page}}</span>
-      <span ng-if="$ctrl.sectionCurrent+1 === page" ng-click="$ctrl.openPage(page)">{{page}}</span>
-      </span>
-      <span ng-if="($ctrl.sectionCurrent+2) <= $ctrl.numberPages">...</span>
+      <span ng-if="$ctrl.sectionCurrent > 2">
+        ...
+        </span>
+      <div class="box" ng-repeat="page in $ctrl.pages track by $index">
+        <a class="page" ng-class="{'-active': $ctrl.page === page}" ng-if="$ctrl.sectionCurrent-1 === page" ng-click="$ctrl.openPage(page)">
+            {{page}}
+        </a>
+        <a class="page" ng-class="{'-active': $ctrl.page === page}" ng-if="$ctrl.sectionCurrent === page" ng-click="$ctrl.openPage(page)">
+        {{page}}
+        </a>
+        <a class="page" ng-class="{'-active': $ctrl.page === page}" ng-if="$ctrl.sectionCurrent+1 === page" ng-click="$ctrl.openPage(page)">
+        {{page}}
+        </a>
+      </div>
+      <span ng-if="($ctrl.sectionCurrent+2) <= $ctrl.numberPages">
+        ...
+        </span>
     </div>
-    <div class="next">
-      <button ng-disabled="!(($ctrl.sectionCurrent+2) <= $ctrl.numberPages)" ng-click="$ctrl.next()">
-        >
+    <button class="next" ng-class="{'-disabled':!(($ctrl.sectionCurrent+2) <= $ctrl.numberPages)}" ng-disabled="!(($ctrl.sectionCurrent+2) <= $ctrl.numberPages)" ng-click="$ctrl.next()">
+        <img class="icon" src="assets/svg/next.svg" alt="">
       </button>
-    </div>
   </div>
 </div>

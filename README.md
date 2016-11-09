@@ -8,7 +8,7 @@ Nesta aplicação não utilizei nenhum framework CSS. Por questão de tempo, o l
 
 O AngularJS procuro seguir as últimas especificações da versão 1.5.* que recomendam o uso de componentes para implementar o [web components](https://www.w3.org/wiki/WebComponents/), também especificado pelo W3C. Não utilizei nenhum framework ou lib, ressalvando o módulo de rotas, o [ui-router](https://github.com/angular-ui/ui-router).
 
-Aqui não utilizo nenhum framework de testes, ou testes unitários. Estou a um tempo tentando mudar a minha cultura para [TDD](http://tableless.com.br/tdd-por-que-usar/). Mas não é algo trivial, principalmente neste momento de minha vida.
+Aqui não utilizo nenhum framework de testes, ou testes unitários. Estou a um tempo tentando mudar a minha cultura para [TDD](http://tableless.com.br/tdd-por-que-usar/). Mas não é algo trivial.
 
 A estrutura de arquivos é pensada para ser escalável, através de componentes e modulos, o que mantém o código organizado e acoplado, facilitando a manutenabilidade. Torna cada parte da página um pequeno componente, que segue as tendências popularizadas pelo [React](https://facebook.github.io/react/). Cada componente possui sua UI/UX com os arquivos necessários para seu funcionamento, assumindo assim todas as responsabilidades. Este projeto não está totalmente componentizado, por questão de tempo, mas segue este conceito.
 
@@ -35,6 +35,7 @@ Assim sendo, as principais pastas são:
 2.  Instalando as dependências do projeto:
 
     `npm i`
+
     `npm i -g gulp-cli`
 
     Talvez você precise do comando `sudo` em sistemas baseado em unix
@@ -66,4 +67,4 @@ Assim sendo, as principais pastas são:
 
 Este projeto é simples e visa demonstrar um CRUD em AngularJS consumindo dados do serviço REST. Utilizo aqui muitas ferramentas, técnicas e conceitos que auxiliam na produtividade, legibilidade do projeto e principalmente construção de aplicação robusta, escalável e de fácil manutenção. AngularJS, um dos primeiros frameworks que contribuíram para a evolução das SPAs, resolve muitos problemas, claro que há pontos positivos e outros negativos, mas é fantástico devido a facilidade de criar aplicações.
 
-Dúvidas, por favor em [henryqrm@gmail.com](mailto:henryqrm@gmail.com) (Henrique Rodrigues)
+Dúvidas, no email [henryqrm@gmail.com](mailto:henryqrm@gmail.com) (Henrique Rodrigues)

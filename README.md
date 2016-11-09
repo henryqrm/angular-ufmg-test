@@ -1,5 +1,7 @@
 # Angular UFMG Test
 
+[Acesse em produção](http://angular-test.henryqrm.com.br/)  :)
+
 ## Introdução
 
 Olá, essa Single Page Application escrita em AngularJS v1.5.* segue os requisitos deste [documento](./../../../assets/teste.pdf), tomei a liberdade de utilizar algumas tecnologias, técnicas e ferramentas que me auxiliam no desenvolvimento da aplicação. Aqui procuro escrever HTML5 de forma semântica seguindo as recomendações da especificação [W3C](https://www.w3.org/). Para escrever CSS3 estou utilizando o preprocessador [SASS](http://sass-lang.com/), no qual sigo o style-guide [RSCSS](http://rscss.io/) que melhora a componentização e deixa o código mais legível e de fácil manutenção. Para escrever o JavaScript sigo o style-guide [ESLint](eslint.org), utilizando o transpiler [Babel](https://babeljs.io), ele permite escrever [ES2016](http://www.ecma-international.org/ecma-262/7.0/), que ao transpilar, gera o código em uma versão mais antiga da [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm) , compatível com browsers mais antigos. E devemos estar atentos as [compatibilidades](caniuse.com) de CSS e JS, pois muitos ainda utilizam [IE](http://www.techtudo.com.br/listas/noticia/2016/01/os-navegadores-de-internet-mais-usados-no-brasil-e-no-mundo.html). Neste projeto há outros conceitos, mas não irei entrar em detalhes para não ser longo demais.

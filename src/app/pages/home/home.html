@@ -1,72 +1,73 @@
 <article class="wellcome">
   <h1>Angular UFMG Test</h1>
-  <p>Oi, essa SPA escrita em <i>AngularJS v1.5.8</i> segue os requisitos deste <a href="./../../../assets/teste.pdf" target="_blank">documento</a>. Aqui procuro escrever HTML semântico seguindo as recomendações da especificação <a href="https://www.w3.org/" target="_blank">W3C</a>. Para tornar mais produtivo o CSS, estou utilizando o preprocessador <a href="http://sass-lang.com/" target="_blank">SASS</a>, no qual sigo o style-guide <a href="http://rscss.io/" target="_blank">RSCSS</a> que melhora a componentização do CSS. Atualmente este style CSS está ajudando a resolver vários problemas que eu tinha. Nesta aplicação não utilizei nenhum framework CSS. Por questão de tempo, o layout deve conter falhas, além de não estar 100% responsivo para os <i>mobiles</i>.
-      <li>O JavaScript Angular é escrito em <a href="https://babeljs.io/">Babel</a> utilizando estes <a href="https://docs.angularjs.org/tutorial/step_03">conceitos</a> que auxiliam na manutentabilidade do código</li>
-    </ol>
-    Não foi utilizado nenhum modulo, lib ou framework CSS, ressalvando o modulo de rotas, o <a href="https://github.com/angular-ui/ui-router" target="_blank">ui-router</a>.</p>
-  <p>
-
-  </p>
+  <section>
+    <h2>Introdução</h2>
+    <p>
+Olá, essa Single Page Application escrita em AngularJS v1.5.* segue os requisitos deste <a href="./../../../assets/teste.pdf" target="_blank">documento</a>, tomei a liberdade de utilizar algumas tecnologias, técnicas e ferramentas que me auxiliam no desenvolvimento da aplicação. Aqui procuro escrever HTML5 de forma semântica seguindo as recomendações da especificação <a href="https://www.w3.org/">W3C</a>. Para escrever CSS3 estou utilizando o preprocessador <a href="http://sass-lang.com/">SASS</a>, no qual sigo o style-guide <a href="http://rscss.io/" target="_blank">RSCSS</a> que melhora a componentização e deixa o código mais legível e de fácil manutenção. Para escrever o JavaScript sigo o style-guide <a href="eslint.org">ESLint</a>, utilizando o transpiler <a href="https://babeljs.io">Babel</a>, ele permite escrever <a href="http://www.ecma-international.org/ecma-262/7.0/">ES2016</a>, que ao transpilar, gera o código em uma versão mais antiga da <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript</a> , compatível com browsers mais antigos. E devemos estar atentos as <a href="caniuse.com">compatibilidades</a> de CSS e JS, pois muitos ainda utilizam <a href="http://www.techtudo.com.br/listas/noticia/2016/01/os-navegadores-de-internet-mais-usados-no-brasil-e-no-mundo.html">IE</a>. Neste projeto há outros conceitos, mas não irei entrar em detalhes para não ser longo demais.
+    </p>
+    <p>Nesta aplicação não utilizei nenhum framework CSS. Por questão de tempo, o layout pode conter falhas, além de não estar responsivo para os mobiles, pensei em Desktop-first.</p>
+    <p>O AngularJS procuro seguir as últimas especificações da versão 1.5.* que recomendam o uso de componentes para implementar o <a href="https://www.w3.org/wiki/WebComponents/">web components</a>, também especificado pelo W3C. Não utilizei nenhum framework ou lib, ressalvando o módulo de rotas, o <a href="https://github.com/angular-ui/ui-router">ui-router.</a></p>
+<p>Aqui não utilizo nenhum framework de testes, ou testes unitários. Estou a um tempo tentando mudar a minha cultura para <a href="http://tableless.com.br/tdd-por-que-usar/">TDD</a>. Mas não é algo trivial, principalmente neste momento de minha vida.</p>
+<p>A estrutura de arquivos é pensada para ser escalável, através de componentes e modulos, o que mantém o código organizado e acoplado, facilitando a manutenabilidade. Torna cada parte da página um pequeno componente, que segue as tendências popularizadas pelo <a href="https://facebook.github.io/react/">React</a>. Cada componente possui sua UI/UX com os arquivos necessários para seu funcionamento, assumindo assim todas as responsabilidades. Este projeto não está totalmente componentizado, por questão de tempo, mas segue este conceito.</p>
+<p>Assim sendo, as principais pastas são:</p>
+<ol>
+  <li><strong>/src/app/auth </strong> — contém toda a estrutura de Authentication;</li>
+  <li><strong>/src/app/components </strong> — Todos os componentes com suas responsabilidades e UI/UX;</li>
+  <li><strong>/src/app/pages </strong>— Todas as páginas da aplicação com suas responsabilidades e UI/UX, caso uma página tenha funcionalidades específicas, é criado subpáginas;</li>
+  <li><strong>/src/app/template </strong>— Estrutura da aplicação.</li>
+</ol>
+  </section>
   <section>
     <h2>Requisitos do projeto</h2>
-    <p>
-      É necessário ter o <a href="https://nodejs.org/en/">NodeJS 4+</a>, NPM 3+ (incluso no NodeJs) e <a href="https://git-scm.com/">git</a> instalado. Para verificar, use no terminal de sua preferência os comandos:
-      <br>
-      <code>
-        node --version && npm --version && git --version
-      </code>
-    </p>
+    <p>É necessário ter o <a href="https://nodejs.org/en/" target="_blank">NodeJS 4+</a>, NPM 3+ (incluso no Node Js) e <a href="https://git-scm.com/">git</a> instalado. Para verificar, use no terminal de sua preferência os comandos:</p>
+    <br>
+    <code>node --version && npm --version && git --version</code>
   </section>
   <section>
     <h2>Instruções de instalação (no terminal)</h2>
-    <p>Baixe o código fonte: <br>
-      <code>git clone https://github.com/henryqrm/angular-ufmg-test/</code>
-    </p>
-    <p>Instalando as dependências do projeto:
-      <br>
-      <code>npm i</code>
-    </p>
-    <p>Talvez você precise do comando <code>sudo</code></p>
+    <ol>
+      <li>
+        Baixe o código fonte:
+        <p><code>git clone https://github.com/henryqrm/angular-ufmg-test</code></p>
+        </li>
+      <li>Instalando as dependências do projeto:
+        <p><code>npm i</code></p>        
+        <p>Talvez você precise do comando <code>sudo</code> em sistemas baseado em unix</p>
+      </li>
+      <li>Executando o projeto:
+        <p><code>gulp serve</code></p>
+      </li>
+      <li>Por fim, acesse via navegador na url indicada no terminal</li>
+    </ol>
+  </section>
+  <section>
+    <h2>AngularJS para mim,</h2>
     <p>
-      Executando o projeto: <br>
-      <code>gulp serve</code>
-    </p>
-    <p>Por fim, acesse via navegador</p>
-  </section>
-  <br><br>
-  <h2>AngularJS para mim,</h2>
-  <br>
-  <section>
-    <h3>Vantagens:</h3>
-    <ul>
-      <li>Um framework pra tudo (Não preciso ficar instalando <i>n</i> modulos)</li>
-      <li>Fácil modularização</li>
-      <li>T</li>
-      <li>Fácil manutenção</li>
-      <li>Comunidade ativa</li>
+      <h3>Vantagens:</h3>
+    <ol>
+      <li>Um framework para tudo (Não preciso ficar instalando n módulos ou lib);</li>
+      <li>Fácil modularização, componentização e manutenção;</li>
+      <li>Aplicação robusta e rápida;</li>
+      <li>Delega para o cliente executar parte do processamento (Isso vem do conceito de SPA);</li>
+      <li>Comunidade ativa, e utilizado em grandes empresas;</li>
       <li>JavaScript ♥</li>
-    </ul>
+    </ol>
+    </p>
+    <p>
+      <h3>Desvantagens:</h3>
+      <ol>
+        <li>Não é otimizado para Searching Engine Optimizations (SEO);</li>
+        <li>Performance (Two-way-data-bind exagerado);</li>
+        <li>Assim como todo framework ou lib JS, cliente faz download de muito JS, piorando o carregamento.</li>
+      </ol>
+    </p>
+
   </section>
-  <br>
   <section>
-    <h3>Desvantagens:</h3>
-    <ul>
-      <li>Searching Engine Optimizations (SEO)</li>
-      <li>Assim como todo framework JS, cliente faz download de muito JS, piorando a UX</li>
-    </ul>
+    <h3>Conclusão</h3>
+    <p>Este projeto é simples e visa demonstrar um CRUD em AngularJS consumindo dados do serviço REST. Utilizo aqui muitas ferramentas, técnicas e conceitos que auxiliam na produtividade, legibilidade do projeto e principalmente construção de aplicação robusta, escalável e de fácil manutenção. AngularJS, um dos primeiros frameworks que contribuíram para a evolução das SPA's, resolve muitos problemas, claro que há pontos positivos e outros negativos, mas é fantástico devido a facilidade de criação de aplicações.</p>
   </section>
-  <br>
-  <section>
-    <h3>Conclusão:</h3>
-    <p>Aplicações AngularJS contrubuiram para a evolução das SPA's, há pontos positivos e outros negaticos, mas é uma questão de requisitos e necessidades do projeto. As vezes o uso de tal frameword ou ferramenta JavaScript pode auxiliar no desenvolvimento,
-      mas será que o cliente/usuários terá uma boa experiencia com nosso produto?</p>
-  </section>
-  <section class="description">
-    <blockquote cite="http://quemdisse.com.br/frase/a-mente-que-se-abre-a-uma-nova-ideia-jamais-volta-ao-seu-tamanho-original/10128/">
-      <p>
-        A mente que se abre a uma nova idéia jamais volta ao seu tamanho original.
-      </p>
-      <cite>Albert Einstein</cite>
-    </blockquote>
-  </section>
+  <footer>
+    <p>Dúvidas, erros e sugestão, por favor em <a href="mailto:henryqrm@gmail.com">henryqrm@gmail.com</a> (Henrique Rodrigues)</p>
+  </footer>
 </article>

@@ -6,7 +6,7 @@ class HeaderController {
   $onInit() {
     this.Auth.getUser().then(user => {
       this.user = user.data;
-    })
+    });
   }
   show() {
     this.$rootScope.$broadcast('main');

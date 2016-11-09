@@ -11,6 +11,13 @@ export class Auth {
   }
 
   login(username, password) {
+    const data = {
+      username,
+      password,
+      grant_type: 'password', // eslint-disable-line camelcase
+      client_id: 'cms' // eslint-disable-line camelcase
+    };
+
     return this
       .$http({
         method: 'POST',
@@ -18,18 +25,16 @@ export class Auth {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        transformRequest: function(obj) {
-          var str = [];
-          for (var p in obj)
-            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+        transformRequest: obj => {
+          const str = [];
+          for (const p in obj) {
+            if ({}.hasOwnProperty.call(obj, p)) {
+              str.push(`${encodeURIComponent(p)}=${encodeURIComponent(obj[p])}`);
+            }
+          }
           return str.join("&");
         },
-        data: {
-          username,
-          password,
-          'grant_type': 'password',
-          'client_id': 'cms'
-        }
+        data
       })
       // return this.$http.post(this.apiAuth, {
       //         username: username,
@@ -54,7 +59,7 @@ export class Auth {
     this.$state.go('login');
   }
   isLoggedIn() {
-    var defer = this.$q.defer();
+    const defer = this.$q.defer();
     return this.getUser().then(res => {
       if (res.status === 200) {
         defer.resolve(true);

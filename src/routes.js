@@ -1,15 +1,15 @@
 export default routesConfig;
 
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    $locationProvider.html5Mode(true).hashPrefix('!');
-    $httpProvider.interceptors.push('AuthInterception');
+  $locationProvider.html5Mode(true).hashPrefix('!');
+  $httpProvider.interceptors.push('AuthInterception');
 
-    $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
 
-    $stateProvider
-        .state('app', {
-            // url: '/',
-            abstract: true,
-            template: '<app></app>'
-        });
+  $stateProvider
+    .state('app', {
+      // url: '/',
+      abstract: true,
+      template: '<app></app>'
+    });
 }

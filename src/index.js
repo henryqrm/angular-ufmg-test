@@ -1,22 +1,38 @@
 import angular from 'angular';
 
-import {newnessModule} from './app/pages/newness/newness.module';
-import {loginModule} from './app/pages/login/login.module';
-import {homeModule} from './app/pages/home/home.module';
+import {
+  newnessModule
+} from './app/pages/newness/newness.module';
+import {
+  loginModule
+} from './app/pages/login/login.module';
+import {
+  homeModule
+} from './app/pages/home/home.module';
 
-
-import {Auth} from './app/auth/auth';
-import {AuthInterception} from './app/auth/interception';
+import {
+  Auth
+} from './app/auth/auth';
+import {
+  AuthInterception
+} from './app/auth/interception';
 import routesAuth from './app/auth/router.decorator';
-
 
 import 'angular-ui-router';
 import routesConfig from './routes';
 
-import {main} from './app/template/main';
-import {header} from './app/template/header';
-import {footer} from './app/template/footer';
-import {nav} from './app/template/nav';
+import {
+  main
+} from './app/template/main';
+import {
+  header
+} from './app/template/header';
+import {
+  footer
+} from './app/template/footer';
+import {
+  nav
+} from './app/template/nav';
 
 import './index.scss';
 
@@ -26,7 +42,7 @@ angular
     loginModule,
     homeModule,
     'ui.router'
-    ])
+  ])
   .config(routesConfig)
   .run(routesAuth)
   .component('app', main)

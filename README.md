@@ -24,7 +24,7 @@ Assim sendo, as principais pastas são:
 
 É necessário ter o [NodeJS 4+](https://nodejs.org/en/), NPM 3+ (incluso no Node Js) e [git](https://git-scm.com/) instalado. Para verificar, use no terminal de sua preferência os comandos:
 
-`node --version && npm --version && git --version`</secti
+`node --version && npm --version && git --version`
 
 ## Instruções de instalação (no terminal)
 
@@ -63,6 +63,6 @@ Assim sendo, as principais pastas são:
 
 ### Conclusão
 
-Este projeto é simples e visa demonstrar um CRUD em AngularJS consumindo dados do serviço REST. Utilizo aqui muitas ferramentas, técnicas e conceitos que auxiliam na produtividade, legibilidade do projeto e principalmente construção de aplicação robusta, escalável e de fácil manutenção. AngularJS, um dos primeiros frameworks que contribuíram para a evolução das SPAs, resolve muitos problemas, claro que há pontos positivos e outros negativos, mas é fantástico devido a facilidade de criação de aplicações.
+Este projeto é simples e visa demonstrar um CRUD em AngularJS consumindo dados do serviço REST. Utilizo aqui muitas ferramentas, técnicas e conceitos que auxiliam na produtividade, legibilidade do projeto e principalmente construção de aplicação robusta, escalável e de fácil manutenção. AngularJS, um dos primeiros frameworks que contribuíram para a evolução das SPAs, resolve muitos problemas, claro que há pontos positivos e outros negativos, mas é fantástico devido a facilidade de criar aplicações.
 
-Dúvidas, erros e sugestão, por favor em [henryqrm@gmail.com](mailto:henryqrm@gmail.com) (Henrique Rodrigues)
+Dúvidas, por favor em [henryqrm@gmail.com](mailto:henryqrm@gmail.com) (Henrique Rodrigues)

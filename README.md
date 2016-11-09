@@ -35,6 +35,7 @@ Assim sendo, as principais pastas são:
 2.  Instalando as dependências do projeto:
 
     `npm i`
+    `npm i -g gulp-cli`
 
     Talvez você precise do comando `sudo` em sistemas baseado em unix
 

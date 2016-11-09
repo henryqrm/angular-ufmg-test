@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-export const homeModule = 'home';
+export const homeModule = 'home-module';
 
 import {
   home
@@ -9,7 +9,7 @@ import {
 angular
   .module(homeModule, ['ui.router'])
   .component('home', home)
-  .config($stateProvider => {
+  .config(['$stateProvider', $stateProvider => {
     $stateProvider
       .state('app.home', {
         url: '/',
@@ -19,4 +19,4 @@ angular
           }
         }
       });
-  });
+  }]);

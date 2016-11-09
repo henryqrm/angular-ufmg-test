@@ -1,6 +1,5 @@
-// http://150.164.80.212:9999/news?page=1&page_size=30
-
 export class NewsService {
+  /** @ngInject */
   constructor($http, API) {
     this.$http = $http;
     this.apiNews = (page, size) => {

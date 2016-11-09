@@ -19,15 +19,20 @@ import {
   newsModule
 } from './../../components/news/news.module';
 
-export const newnessModule = 'newness';
+import 'angular-ui-router';
+
+export const newnessModule = 'newness-module';
 
 angular
-  .module(newnessModule, ['ui.router', newsModule])
+  .module(newnessModule, [
+    'ui.router',
+    newsModule
+  ])
   .component('newness', newness)
   .component('create', newsCreate)
   .component('edit', newsEdit)
   .service('News', NewsService)
-  .config($stateProvider => {
+  .config(['$stateProvider', $stateProvider => {
     $stateProvider
       .state('app.news', {
         url: '/news',
@@ -53,4 +58,4 @@ angular
           }
         }
       });
-  });
+  }]);

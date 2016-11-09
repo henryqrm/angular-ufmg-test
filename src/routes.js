@@ -1,6 +1,8 @@
 export default routesConfig;
 
+/** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+  'ngInject';
   $locationProvider.html5Mode(true).hashPrefix('!');
   $httpProvider.interceptors.push('AuthInterception');
 
@@ -8,7 +10,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $ht
 
   $stateProvider
     .state('app', {
-      // url: '/',
       abstract: true,
       template: '<app></app>'
     });

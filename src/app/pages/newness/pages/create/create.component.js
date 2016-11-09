@@ -1,4 +1,5 @@
 class NewsCreateController {
+  /** @ngInject */
   constructor(News, $state) {
     this.News = News;
     this.$state = $state;
@@ -22,6 +23,6 @@ class NewsCreateController {
 }
 
 export const newsCreate = {
-  templateUrl: './app/pages/newness/pages/newness.form.tpl.html',
+  templateUrl: 'app/pages/newness/pages/newness.form.tpl.html',
   controller: NewsCreateController
 };

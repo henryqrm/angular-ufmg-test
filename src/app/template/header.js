@@ -1,4 +1,5 @@
 class HeaderController {
+  /** @ngInject */
   constructor(Auth, $rootScope) {
     this.Auth = Auth;
     this.$rootScope = $rootScope;

@@ -1,5 +1,7 @@
 export class AuthInterception {
+  /** @ngInject */
   constructor($rootScope, $q, $injector, $window) {
+    'ngInject';
     let state;
     return {
       request(config) {

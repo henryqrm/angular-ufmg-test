@@ -1,4 +1,5 @@
 class NavController {
+  /** @ngInject */
   constructor($rootScope) {
     this.hidden = false;
     $rootScope.$on('main', () => {

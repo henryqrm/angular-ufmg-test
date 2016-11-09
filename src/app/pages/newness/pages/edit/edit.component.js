@@ -1,4 +1,5 @@
 class NewsEditController {
+  /** @ngInject */
   constructor(News, $stateParams, $state) {
     this.News = News;
     this.$state = $state;
@@ -39,6 +40,6 @@ class NewsEditController {
 }
 
 export const newsEdit = {
-  templateUrl: './app/pages/newness/pages/newness.form.tpl.html',
+  templateUrl: 'app/pages/newness/pages/newness.form.tpl.html',
   controller: NewsEditController
 };

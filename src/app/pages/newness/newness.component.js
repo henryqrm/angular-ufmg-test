@@ -1,4 +1,5 @@
 class NewnessController {
+  /** @ngInject */
   constructor($http, News) {
     this.News = News;
     this.size = 10;

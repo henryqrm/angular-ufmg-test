@@ -1,4 +1,5 @@
 export class Auth {
+  /** @ngInject */
   constructor(API, $location, $http, $q, $window, $state) {
     this.apiAuth = `${API}/authenticate`;
     this.apiUser = `${API}/account`;

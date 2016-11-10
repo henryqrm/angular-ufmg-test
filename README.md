@@ -1,18 +1,18 @@
 # Angular UFMG Test
 
-[Acesse em produção](http://angular-test.henryqrm.com.br/)  :)
-
 ## Introdução
 
-Olá, essa Single Page Application escrita em AngularJS v1.5.* segue os requisitos deste [documento](./../../../assets/teste.pdf), tomei a liberdade de utilizar algumas tecnologias, técnicas e ferramentas que me auxiliam no desenvolvimento da aplicação. Aqui procuro escrever HTML5 de forma semântica seguindo as recomendações da especificação [W3C](https://www.w3.org/). Para escrever CSS3 estou utilizando o preprocessador [SASS](http://sass-lang.com/), no qual sigo o style-guide [RSCSS](http://rscss.io/) que melhora a componentização e deixa o código mais legível e de fácil manutenção. Para escrever o JavaScript sigo o style-guide [ESLint](eslint.org), utilizando o transpiler [Babel](https://babeljs.io), ele permite escrever [ES2016](http://www.ecma-international.org/ecma-262/7.0/), que ao transpilar, gera o código em uma versão mais antiga da [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm) , compatível com browsers mais antigos. E devemos estar atentos as [compatibilidades](caniuse.com) de CSS e JS, pois muitos ainda utilizam [IE](http://www.techtudo.com.br/listas/noticia/2016/01/os-navegadores-de-internet-mais-usados-no-brasil-e-no-mundo.html). Neste projeto há outros conceitos, mas não irei entrar em detalhes para não ser longo demais.
+Olá,
 
-Nesta aplicação não utilizei nenhum framework CSS. Por questão de tempo, o layout pode conter falhas, além de não estar responsivo para os mobiles, pensei em Desktop-first.
+Essa Single Page Application escrita em AngularJS v1.5.* segue os requisitos deste [documento](http://angular-test.henryqrm.com.br/assets/teste.pdf), tomei a liberdade de utilizar algumas tecnologias, técnicas e ferramentas que me auxiliaram no desenvolvimento da aplicação. Aqui procuro escrever HTML5 de forma semântica seguindo as recomendações da especificação [W3C](https://www.w3.org/). Para escrever CSS3 estou utilizando o preprocessador [SASS](http://sass-lang.com/), no qual sigo o style-guide [RSCSS](http://rscss.io/) que melhora a componentização, deixando o código mais legível e de fácil manutenção. Para escrever o JavaScript sigo o style-guide [ESLint](https://eslint.org), utilizando o transpiler [Babel](https://babeljs.io), ele permite escrever [ES2016](http://www.ecma-international.org/ecma-262/7.0/), que ao transpilar, gera o código em uma versão mais antiga da [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm) , compatível com browsers mais antigos. E devemos estar atentos as [compatibilidades](https://caniuse.com) de CSS e JS, pois muitos ainda utilizam [IE](http://www.techtudo.com.br/listas/noticia/2016/01/os-navegadores-de-internet-mais-usados-no-brasil-e-no-mundo.html). Neste projeto há outros conceitos, mas não irei entrar em detalhes para não ser longo demais.
 
-O AngularJS procuro seguir as últimas especificações da versão 1.5.* que recomendam o uso de componentes para implementar o [web components](https://www.w3.org/wiki/WebComponents/), também especificado pelo W3C. Não utilizei nenhum framework ou lib, ressalvando o módulo de rotas, o [ui-router](https://github.com/angular-ui/ui-router).
+Nesta aplicação não utilizei nenhum framework CSS. Devido ao tempo, o layout pode conter falhas, além de não estar responsivo para os mobiles, pensei em Desktop-first.
 
-Aqui não utilizo nenhum framework de testes, ou testes unitários. Estou a um tempo tentando mudar a minha cultura para [TDD](http://tableless.com.br/tdd-por-que-usar/). Mas não é algo trivial.
+No AngularJS procurei seguir as últimas especificações da versão 1.5.* que recomendam o uso de componentes para implementar o [web components](https://www.w3.org/wiki/WebComponents/), também especificado pelo W3C. Não utilizei nenhum framework ou lib, ressalvando o módulo de rotas, o [ui-router.](https://github.com/angular-ui/ui-router)
 
-A estrutura de arquivos é pensada para ser escalável, através de componentes e modulos, o que mantém o código organizado e acoplado, facilitando a manutenabilidade. Torna cada parte da página um pequeno componente, que segue as tendências popularizadas pelo [React](https://facebook.github.io/react/). Cada componente possui sua UI/UX com os arquivos necessários para seu funcionamento, assumindo assim todas as responsabilidades. Este projeto não está totalmente componentizado, por questão de tempo, mas segue este conceito.
+Aqui não utilizo nenhum framework de testes, ou testes unitários. Estou a um tempo tentando mudar a minha cultura para [TDD](http://tableless.com.br/tdd-por-que-usar/), mas não é algo trivial.
+
+A estrutura de arquivos é pensada para ser escalável, através de componentes e modulos, o que mantém o código organizado, acoplado e manutenibilidade. Torna cada parte da página um pequeno componente, que segue as tendências popularizadas pelo [React](https://facebook.github.io/react/). Cada componente possui sua UI/UX com os arquivos necessários para seu funcionamento, assumindo assim todas as responsabilidades. Este projeto não está totalmente componentizado, por questão de tempo, mas segue este conceito.
 
 Assim sendo, as principais pastas são:
 
@@ -20,7 +20,6 @@ Assim sendo, as principais pastas são:
 2.  **/src/app/components** — Todos os componentes com suas responsabilidades e UI/UX;
 3.  **/src/app/pages** — Todas as páginas da aplicação com suas responsabilidades e UI/UX, caso uma página tenha funcionalidades específicas, é criado subpáginas;
 4.  **/src/app/template** — Estrutura da aplicação.
-
 
 ## Requisitos do projeto
 
@@ -67,6 +66,6 @@ Assim sendo, as principais pastas são:
 
 ### Conclusão
 
-Este projeto é simples e visa demonstrar um CRUD em AngularJS consumindo dados do serviço REST. Utilizo aqui muitas ferramentas, técnicas e conceitos que auxiliam na produtividade, legibilidade do projeto e principalmente construção de aplicação robusta, escalável e de fácil manutenção. AngularJS, um dos primeiros frameworks que contribuíram para a evolução das SPAs, resolve muitos problemas, claro que há pontos positivos e outros negativos, mas é fantástico devido a facilidade de criar aplicações.
+Este projeto é simples e visa demonstrar um CRUD em AngularJS consumindo dados do serviço REST. Utilizo aqui muitas ferramentas, técnicas e conceitos que auxiliam na produtividade, legibilidade do projeto e principalmente construção de aplicação robusta, escalável e de fácil manutenção. AngularJS, um dos primeiros frameworks que contribuíram para a evolução das SPA's, resolve muitos problemas, claro que há pontos positivos e outros negativos, mas é fantástico devido a facilidade de criar aplicações.
 
 Dúvidas, no email [henryqrm@gmail.com](mailto:henryqrm@gmail.com) (Henrique Rodrigues)

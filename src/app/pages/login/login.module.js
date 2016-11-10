@@ -12,7 +12,7 @@ angular
   .config(['$stateProvider', $stateProvider => {
     $stateProvider
       .state('login', {
-        url: '/acesso',
+        url: '/',
         template: '<login></login>'
       });
   }]);

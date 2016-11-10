@@ -12,7 +12,7 @@ angular
   .config(['$stateProvider', $stateProvider => {
     $stateProvider
       .state('app.home', {
-        url: '/',
+        url: '/dashboard',
         views: {
           content: {
             template: '<home></home>'
